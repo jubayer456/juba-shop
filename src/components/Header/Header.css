@@ -1,4 +1,9 @@
 nav a {
     text-decoration: none;
     margin-right: 30px;
+    color: white;
+}
+
+nav {
+    background-color: cornflowerblue;
 }
