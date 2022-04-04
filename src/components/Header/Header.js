@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
+import './Header.css'
 const Header = () => {
     return (
         <nav class="navbar navbar-expand-lg navbar-light ">
@@ -8,18 +9,21 @@ const Header = () => {
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <Link></Link>
+                            <Link to='/'>Home</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <Link to='/reviews'>Reviews</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <Link to='/dashboards'>Dash Board</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
+                            <Link to='/blogs'>Blogs</Link>
+                        </li>
+                        <li class="nav-item">
+                            <Link to='/about'>About</Link>
                         </li>
                     </ul>
                 </div>
