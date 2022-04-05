@@ -10,7 +10,7 @@ import About from './components/About/About'
 import { Route, Routes } from 'react-router-dom';
 function App() {
   return (
-    <div className="App">
+    <div >
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home />}></Route>
