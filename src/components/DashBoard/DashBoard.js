@@ -1,5 +1,5 @@
 import React from 'react';
-import { Area, AreaChart, Bar, BarChart, CartesianGrid, Legend, Line, LineChart, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import { CartesianGrid, Legend, Line, LineChart, Pie, PieChart, Tooltip, XAxis, YAxis } from 'recharts';
 const DashBoard = () => {
     const data = [
         {
@@ -42,17 +42,9 @@ const DashBoard = () => {
     return (
         <div className='m-3'>
             <div className='container'>
-                <div className='row'>
+                <div className="row">
                     <div className='col-12 col-lg-6'>
                         <h2 className='text-center my-3'>Month Wise Sell</h2>
-                        <PieChart width={500} height={250}>
-                            <Pie data={data} dataKey="investment" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
-                            <Pie data={data} dataKey="revenue" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
-                        </PieChart>
-
-                    </div>
-                    <div className='col-12 col-lg-6'>
-                        <h2 className='text-center my-3'>Investment vs Revenue</h2>
                         <LineChart width={500} height={250} data={data}
                             margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                             <CartesianGrid strokeDasharray="3 3" />
@@ -63,8 +55,16 @@ const DashBoard = () => {
                             <Line type="monotone" dataKey="sell" stroke="#8884d8" />
                         </LineChart>
                     </div>
+                    <div className='col-12 col-lg-6'>
+                        <h2 className='text-center my-3'>Investment vs Revenue</h2>
+                        <PieChart width={500} height={250}>
+                            <Pie data={data} dataKey="investment" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
+                            <Pie data={data} dataKey="revenue" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
+                        </PieChart>
 
+                    </div>
                 </div>
+
             </div>
         </div>
     );
