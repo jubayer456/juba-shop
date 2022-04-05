@@ -6,6 +6,14 @@ import useComment from '../Hooks/useComment';
 import './Home.css'
 const Home = () => {
     const [comments, setComments] = useComment();
+    let count = 0;
+    let newComment = [];
+    for (const com of comments) {
+        if (count < 3) {
+            newComment.push(com);
+        }
+        count++;
+    }
     return (
         <div className='m-4'>
             <div className="container">
@@ -25,16 +33,18 @@ const Home = () => {
                 <h1 className='text-center my-5'>Our Customer Says</h1>
                 <div class="row row-cols-1 row-cols-lg-3 g-4">
                     {
-                        comments.map(comment => <Comment
+                        newComment.map(comment => <Comment
                             key={comment.id}
                             comment={comment}
                         ></Comment>)
                     }
                 </div>
             </div>
-            <Link to='/reviews'>
-                <button className='ku border-0 rounded  py-2 px-4 bg-success my-4'>Show all Comments</button>
-            </Link>
+            <div className='text-center'>
+                <Link to='/reviews'>
+                    <button className='ku border-0 rounded  py-2 px-4 bg-primary text-light my-4'>Show all Comments</button>
+                </Link>
+            </div>
         </div>
     );
 };
