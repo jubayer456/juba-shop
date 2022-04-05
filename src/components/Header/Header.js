@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CustomLink from '../Customlink/Customlink';
 import './Header.css'
 const Header = () => {
     return (
@@ -13,19 +14,19 @@ const Header = () => {
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <Link to='/'>Home</Link>
+                            <CustomLink to='/'>Home</CustomLink>
                         </li>
                         <li class="nav-item">
-                            <Link to='/reviews'>Reviews</Link>
+                            <CustomLink to='/reviews'>Reviews</CustomLink>
                         </li>
                         <li class="nav-item">
-                            <Link to='/dashboards'>Dash Board</Link>
+                            <CustomLink to='/dashboards'>Dash Board</CustomLink>
                         </li>
                         <li class="nav-item">
-                            <Link to='/blogs'>Blogs</Link>
+                            <CustomLink to='/blogs'>Blogs</CustomLink>
                         </li>
                         <li class="nav-item">
-                            <Link to='/about'>About</Link>
+                            <CustomLink to='/about'>About</CustomLink>
                         </li>
                     </ul>
                 </div>
