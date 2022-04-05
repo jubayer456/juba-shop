@@ -1,6 +1,6 @@
 # Juba Shop
 
-This project was bootstrapped with [Juba Shop](https://illustrious-kashata-3cbab7.netlify.app/).
+Live site Link- [Juba Shop](https://illustrious-kashata-3cbab7.netlify.app/).
 
 1. In this site 6 reviws shows. 
 2. If user click Review then he can see all the reviews. 

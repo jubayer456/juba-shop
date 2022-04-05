@@ -1,5 +1,5 @@
 import React from 'react';
-import { CartesianGrid, Legend, Line, LineChart, Pie, PieChart, Tooltip, XAxis, YAxis } from 'recharts';
+import { CartesianGrid, Legend, Line, LineChart, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 const DashBoard = () => {
     const data = [
         {
@@ -45,23 +45,26 @@ const DashBoard = () => {
                 <div className="row">
                     <div className='col-12 col-lg-6'>
                         <h2 className='text-center my-3'>Month Wise Sell</h2>
-                        <LineChart width={500} height={250} data={data}
-                            margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-                            <CartesianGrid strokeDasharray="3 3" />
-                            <XAxis dataKey="month" />
-                            <YAxis />
-                            <Tooltip />
-                            <Legend />
-                            <Line type="monotone" dataKey="sell" stroke="#8884d8" />
-                        </LineChart>
+                        <ResponsiveContainer width="100%" height="80%">
+                            <LineChart width={500} height={250} data={data}
+                                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                                <CartesianGrid strokeDasharray="3 3" />
+                                <XAxis dataKey="month" />
+                                <YAxis />
+                                <Tooltip />
+                                <Legend />
+                                <Line type="monotone" dataKey="sell" stroke="#8884d8" />
+                            </LineChart>
+                        </ResponsiveContainer>
                     </div>
                     <div className='col-12 col-lg-6'>
                         <h2 className='text-center my-3'>Investment vs Revenue</h2>
-                        <PieChart width={500} height={250}>
-                            <Pie data={data} dataKey="investment" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
-                            <Pie data={data} dataKey="revenue" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
-                        </PieChart>
-
+                        <ResponsiveContainer width="100%" height="80%">
+                            <PieChart width={500} height={250}>
+                                <Pie data={data} dataKey="investment" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
+                                <Pie data={data} dataKey="revenue" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
+                            </PieChart>
+                        </ResponsiveContainer>
                     </div>
                 </div>
 
