@@ -8,7 +8,7 @@ const Comment = ({ comment }) => {
                 <img src={img} className="card-img-top card-img" alt="..." />
                 <div class="card-body">
                     <h5 class="card-title">{name}</h5>
-                    <p>Ratings{ratings}</p>
+                    <p>Ratings: {ratings}</p>
                     <p class="card-text">{review}</p>
                 </div>
             </div>
